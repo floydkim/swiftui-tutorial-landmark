@@ -11,10 +11,18 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         // Each modifier returns a new view, so it’s common to chain multiple modifiers, stacked vertically.
-        Text("Turtle Rock")
-            .font(.title)
-            .padding()
-            .foregroundColor(.black)
+        VStack(alignment: .leading) {
+            Text("Turtle Rock")
+                .font(.title)
+            HStack {
+                Text("Joshua Tree National Park")
+                    .font(.subheadline)
+                Spacer()
+                Text("California")
+                    .font(.subheadline)
+            }
+        }
+        .padding()
     }
 }
 
