@@ -24,12 +24,20 @@ struct LandmarkList: View {
             // by passing along with your data a key path to a property that uniquely identifies each element,
             //   -> (이렇게) List(landmarks, id: \.id) { landmark in ....
             // or by making your data type conform to the Identifiable protocol.
-            List(filteredLandmarks) { landmark in
-                NavigationLink {
-                    // destination
-                    LandmarkDetail(landmark: landmark)
-                } label: {
-                    LandmarkRow(landmark: landmark)
+            List {
+                Toggle(isOn: $showFavoritesOnly) {
+                    Text("Favorites only")
+                }
+                
+                // To combine static and dynamic views in a list, or to combine two or more different groups of dynamic views,
+                // use the ForEach type instead of passing your collection of data to List.
+                ForEach(filteredLandmarks) { landmark in
+                    NavigationLink {
+                        // destination
+                        LandmarkDetail(landmark: landmark)
+                    } label: {
+                        LandmarkRow(landmark: landmark)
+                    }
                 }
                 // (참고) 아래와 같음. 문법 축약 차이
 //                NavigationLink(destination: {() in
