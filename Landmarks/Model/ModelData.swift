@@ -9,8 +9,10 @@ import Foundation
 import Combine
 
 final class ModelData: ObservableObject {
-    // array of landmarks that you initialize from landmarkData.json.
     @Published var landmarks: [Landmark] = load("landmarkData.json")
+    
+    // Because you’ll never modify hike data after initially loading it, you don’t need to mark it with the @Published attribute.
+    var hikes: [Hike] = load("hikeData.json")
 }
 
 // fetches JSON data with a given name from the app’s main bundle.
