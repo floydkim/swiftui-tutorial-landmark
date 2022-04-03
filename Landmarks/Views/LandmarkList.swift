@@ -17,7 +17,7 @@ struct LandmarkList: View {
             List(landmarks) { landmark in
                 NavigationLink {
                     // destination
-                    LandmarkDetail()
+                    LandmarkDetail(landmark: landmark)
                 } label: {
                     LandmarkRow(landmark: landmark)
                 }
