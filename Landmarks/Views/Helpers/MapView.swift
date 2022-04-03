@@ -34,7 +34,10 @@ struct MapView: View {
 }
 
 struct MapView_Previews: PreviewProvider {
+    static let modelData = ModelData()
+    
     static var previews: some View {
-        MapView(coordinate: ModelData().landmarks[0].locationCoordinate)
+        MapView(coordinate: modelData.landmarks[0].locationCoordinate)
+            .environmentObject(modelData)
     }
 }

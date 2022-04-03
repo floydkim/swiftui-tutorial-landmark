@@ -13,6 +13,7 @@
 		16207BA327F87BF400E5CF4D /* LandmarkRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16207BA227F87BF400E5CF4D /* LandmarkRow.swift */; };
 		16207BA527F95FC100E5CF4D /* LandmarkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16207BA427F95FC100E5CF4D /* LandmarkList.swift */; };
 		16207BA727F9649200E5CF4D /* LandmarkDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16207BA627F9649200E5CF4D /* LandmarkDetail.swift */; };
+		16207BAE27F9976300E5CF4D /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16207BAD27F9976300E5CF4D /* FavoriteButton.swift */; };
 		167C1AF027E754CA00ED0D78 /* LandmarksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167C1AEF27E754CA00ED0D78 /* LandmarksApp.swift */; };
 		167C1AF227E754CA00ED0D78 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167C1AF127E754CA00ED0D78 /* ContentView.swift */; };
 		167C1AF427E754CD00ED0D78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 167C1AF327E754CD00ED0D78 /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 		16207BA227F87BF400E5CF4D /* LandmarkRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkRow.swift; sourceTree = "<group>"; };
 		16207BA427F95FC100E5CF4D /* LandmarkList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkList.swift; sourceTree = "<group>"; };
 		16207BA627F9649200E5CF4D /* LandmarkDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkDetail.swift; sourceTree = "<group>"; };
+		16207BAD27F9976300E5CF4D /* FavoriteButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 		167C1AEC27E754CA00ED0D78 /* Landmarks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Landmarks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		167C1AEF27E754CA00ED0D78 /* LandmarksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarksApp.swift; sourceTree = "<group>"; };
 		167C1AF127E754CA00ED0D78 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,12 +53,9 @@
 		16207B9E27F879AA00E5CF4D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				16207BAC27F996AD00E5CF4D /* Helpers */,
 				167C1AF127E754CA00ED0D78 /* ContentView.swift */,
-				167C1AFF27F3601600ED0D78 /* MapView.swift */,
-				167C1AFD27F35B4F00ED0D78 /* CircleImage.swift */,
-				16207BA227F87BF400E5CF4D /* LandmarkRow.swift */,
-				16207BA427F95FC100E5CF4D /* LandmarkList.swift */,
-				16207BA627F9649200E5CF4D /* LandmarkDetail.swift */,
+				16207BAB27F9969B00E5CF4D /* Landmarks */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -76,6 +75,26 @@
 				16207B9827F875BC00E5CF4D /* landmarkData.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		16207BAB27F9969B00E5CF4D /* Landmarks */ = {
+			isa = PBXGroup;
+			children = (
+				16207BA227F87BF400E5CF4D /* LandmarkRow.swift */,
+				16207BA427F95FC100E5CF4D /* LandmarkList.swift */,
+				16207BA627F9649200E5CF4D /* LandmarkDetail.swift */,
+			);
+			path = Landmarks;
+			sourceTree = "<group>";
+		};
+		16207BAC27F996AD00E5CF4D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				16207BAD27F9976300E5CF4D /* FavoriteButton.swift */,
+				167C1AFF27F3601600ED0D78 /* MapView.swift */,
+				167C1AFD27F35B4F00ED0D78 /* CircleImage.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		167C1AE327E754CA00ED0D78 = {
@@ -194,6 +213,7 @@
 				167C1AFE27F35B4F00ED0D78 /* CircleImage.swift in Sources */,
 				16207B9B27F875F300E5CF4D /* Landmark.swift in Sources */,
 				16207BA327F87BF400E5CF4D /* LandmarkRow.swift in Sources */,
+				16207BAE27F9976300E5CF4D /* FavoriteButton.swift in Sources */,
 				16207B9D27F877C600E5CF4D /* ModelData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
