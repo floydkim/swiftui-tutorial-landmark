@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct LandmarkList: View {
+    // The modelData property gets its value automatically, as long as the environmentObject(_:) modifier has been applied to a parent.
+    @EnvironmentObject var modelData: ModelData
     @State private var showFavoritesOnly = false
     
     var filteredLandmarks: [Landmark] {
         if (showFavoritesOnly) {
-            return landmarks.filter { landmark in landmark.isFavorite }
+            return modelData.landmarks.filter { landmark in landmark.isFavorite }
         } else {
-            return landmarks
+            return modelData.landmarks
         }
     }
     

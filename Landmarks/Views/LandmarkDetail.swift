@@ -7,9 +7,6 @@
 
 import SwiftUI
 
-// dummy selection for previews
-let LANDMARK = landmarks[0]
-
 struct LandmarkDetail: View {
     var landmark: Landmark
     
@@ -54,6 +51,6 @@ struct LandmarkDetail: View {
 
 struct LandmarkDetail_Previews: PreviewProvider {
     static var previews: some View {
-        LandmarkDetail(landmark: LANDMARK)
+        LandmarkDetail(landmark: ModelData().landmarks[0])
     }
 }
