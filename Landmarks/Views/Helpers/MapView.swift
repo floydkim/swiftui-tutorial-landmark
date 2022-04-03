@@ -34,10 +34,7 @@ struct MapView: View {
 }
 
 struct MapView_Previews: PreviewProvider {
-    static let modelData = ModelData()
-    
     static var previews: some View {
-        MapView(coordinate: modelData.landmarks[0].locationCoordinate)
-            .environmentObject(modelData)
+        MapView(coordinate: CLLocationCoordinate2D(latitude: 34.011_286, longitude: -116.166_868))
     }
 }

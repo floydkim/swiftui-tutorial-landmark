@@ -24,7 +24,6 @@ struct CircleImage_Previews: PreviewProvider {
     static let modelData = ModelData()
     
     static var previews: some View {
-        CircleImage(image: modelData.landmarks[0].image)
-            .environmentObject(modelData)
+        CircleImage(image: Image("turtlerock"))
     }
 }
