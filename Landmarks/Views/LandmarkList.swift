@@ -8,13 +8,23 @@
 import SwiftUI
 
 struct LandmarkList: View {
+    @State private var showFavoritesOnly = false
+    
+    var filteredLandmarks: [Landmark] {
+        if (showFavoritesOnly) {
+            return landmarks.filter { landmark in landmark.isFavorite }
+        } else {
+            return landmarks
+        }
+    }
+    
     var body: some View {
         NavigationView {
             // Lists work with identifiable data. You can make your data identifiable in one of two ways:
             // by passing along with your data a key path to a property that uniquely identifies each element,
             //   -> (이렇게) List(landmarks, id: \.id) { landmark in ....
             // or by making your data type conform to the Identifiable protocol.
-            List(landmarks) { landmark in
+            List(filteredLandmarks) { landmark in
                 NavigationLink {
                     // destination
                     LandmarkDetail(landmark: landmark)
