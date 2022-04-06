@@ -13,10 +13,19 @@ struct CategoryHome: View {
     var body: some View {
         NavigationView {
             List {
+                modelData.features[0].image
+                    .resizable()
+                    .scaledToFill() // scaledToFit이 아니다!
+                    .frame(height: 200)
+                    .clipped()
+                    .listRowInsets(EdgeInsets())
+                
                 ForEach(modelData.categories.keys.sorted(), id: \.self) { key in
-                    Text(key)
+                    CategoryRow(categoryName: key, items: modelData.categories[key]!)
                 }
+                .listRowInsets(EdgeInsets())
             }
+            .listStyle(.plain) // 튜토리얼의 코드와 달리, 스타일을 지정해야함
             .navigationTitle("Featured")
         }
     }
